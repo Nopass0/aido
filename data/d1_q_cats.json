@@ -1,0 +1,6 @@
+{
+ "cats": {"type": "number", "instructions": "How many cats are there?", "range": [0, 10], "step": 1},
+ "remote": {"type": "box", "instructions": "Where is the remote control on the left?"},
+ "sofa": {"type": "noul", "instructions": "Is there a sofa or couch?"},
+ "color": {"type": "choice", "instructions": "What color is the blanket?", "criteria": {"pink": "pink", "blue": "blue", "green": "green", "black": "black"}}
+}

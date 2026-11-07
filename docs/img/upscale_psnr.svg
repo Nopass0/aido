@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="240" viewBox="0 0 760 240">
+<style>
+ text{font-family:Segoe UI,Helvetica,Arial,sans-serif;fill:#24292f}
+ .t{font-size:17px;font-weight:600}.s{font-size:12px;fill:#57606a}.l{font-size:13px}.v{font-size:12px;font-weight:600}
+ @media (prefers-color-scheme:dark){text{fill:#e6edf3}.s{fill:#8b949e}}
+</style>
+<text x="16" y="28" class="t">Апскейл ×2 аниме (Baikal LoopSR) — качество</text><text x="16" y="48" class="s">PSNR, дБ, относительно оригинала 128×128 (выше — лучше)</text>
+<text x="220" y="81.68" text-anchor="end" class="l">бикубик</text>
+<rect x="230" y="64" width="264.6" height="26" rx="4" fill="#8c959f"/>
+<text x="502.6363636363636" y="81.68" class="v">35.5 дБ</text>
+<text x="220" y="119.68" text-anchor="end" class="l">LoopSR, 1 цикл</text>
+<rect x="230" y="102" width="345.9" height="26" rx="4" fill="#2f81f7"/>
+<text x="583.8909090909091" y="119.68" class="v">46.4 дБ</text>
+<text x="220" y="157.68" text-anchor="end" class="l">LoopSR, 2 цикла</text>
+<rect x="230" y="140" width="358.6" height="26" rx="4" fill="#2f81f7"/>
+<text x="596.5636363636363" y="157.68" class="v">48.1 дБ</text>
+<text x="220" y="195.68" text-anchor="end" class="l">LoopSR, 4 цикла</text>
+<rect x="230" y="178" width="363.0" height="26" rx="4" fill="#2f81f7"/>
+<text x="601.0363636363636" y="195.68" class="v">48.7 дБ</text>
+</svg>

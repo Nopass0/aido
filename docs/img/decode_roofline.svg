@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="316" viewBox="0 0 760 316">
+<style>
+ text{font-family:Segoe UI,Helvetica,Arial,sans-serif;fill:#24292f}
+ .t{font-size:17px;font-weight:600}.s{font-size:12px;fill:#57606a}.l{font-size:13px}.v{font-size:12px;font-weight:600}
+ @media (prefers-color-scheme:dark){text{fill:#e6edf3}.s{fill:#8b949e}}
+</style>
+<text x="16" y="28" class="t">Генерация на CPU против теоретического предела памяти</text><text x="16" y="48" class="s">ток/с; предел = пропускная способность RAM (13.9 ГБ/с) / байт весов на токен</text>
+<text x="220" y="81.68" text-anchor="end" class="l">Qwen3-0.6B Q8 · предел</text>
+<rect x="230" y="64" width="356.5" height="26" rx="4" fill="#8c959f"/>
+<text x="594.5217391304348" y="81.68" class="v">22 ток/с</text>
+<text x="220" y="119.68" text-anchor="end" class="l">Qwen3-0.6B Q8 · AIDO</text>
+<rect x="230" y="102" width="299.8" height="26" rx="4" fill="#2f81f7"/>
+<text x="537.802371541502" y="119.68" class="v">18.5 ток/с · 85 %</text>
+<text x="220" y="157.68" text-anchor="end" class="l">Llama-3.2-1B Q4_K_M · предел</text>
+<rect x="230" y="140" width="275.5" height="26" rx="4" fill="#8c959f"/>
+<text x="513.494071146245" y="157.68" class="v">17 ток/с</text>
+<text x="220" y="195.68" text-anchor="end" class="l">Llama-3.2-1B Q4_K_M · AIDO</text>
+<rect x="230" y="178" width="252.8" height="26" rx="4" fill="#2f81f7"/>
+<text x="490.806324110672" y="195.68" class="v">15.6 ток/с · 90 %</text>
+<text x="220" y="233.68" text-anchor="end" class="l">Qwen3.6-35B-A3B · предел</text>
+<rect x="230" y="216" width="85.9" height="26" rx="4" fill="#8c959f"/>
+<text x="323.8893280632411" y="233.68" class="v">5.3 ток/с</text>
+<text x="220" y="271.68" text-anchor="end" class="l">Qwen3.6-35B-A3B · AIDO</text>
+<rect x="230" y="254" width="60.0" height="26" rx="4" fill="#2f81f7"/>
+<text x="297.9604743083004" y="271.68" class="v">3.7 ток/с · CPU</text>
+</svg>

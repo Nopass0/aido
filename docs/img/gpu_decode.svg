@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="316" viewBox="0 0 760 316">
+<style>
+ text{font-family:Segoe UI,Helvetica,Arial,sans-serif;fill:#24292f}
+ .t{font-size:17px;font-weight:600}.s{font-size:12px;fill:#57606a}.l{font-size:13px}.v{font-size:12px;font-weight:600}
+ @media (prefers-color-scheme:dark){text{fill:#e6edf3}.s{fill:#8b949e}}
+</style>
+<text x="16" y="28" class="t">Генерация: весь граф модели на GPU против CPU</text><text x="16" y="48" class="s">ток/с, RTX 3070 (Vulkan) против Xeon E5-2670 v3 c одноканальной DDR4; один и тот же текст на выходе</text>
+<text x="220" y="81.68" text-anchor="end" class="l">Qwen2.5-0.5B Q4_0 · CPU</text>
+<rect x="230" y="64" width="43.6" height="26" rx="4" fill="#8c959f"/>
+<text x="281.62046717404473" y="81.68" class="v">20.2 ток/с</text>
+<text x="220" y="119.68" text-anchor="end" class="l">Qwen2.5-0.5B Q4_0 · GPU</text>
+<rect x="230" y="102" width="356.5" height="26" rx="4" fill="#2da44e"/>
+<text x="594.5217391304348" y="119.68" class="v">165.1 ток/с · ×8.2</text>
+<text x="220" y="157.68" text-anchor="end" class="l">Qwen3-0.6B Q8_0 · CPU</text>
+<rect x="230" y="140" width="29.6" height="26" rx="4" fill="#8c959f"/>
+<text x="267.5841782319016" y="157.68" class="v">13.7 ток/с</text>
+<text x="220" y="195.68" text-anchor="end" class="l">Qwen3-0.6B Q8_0 · GPU</text>
+<rect x="230" y="178" width="316.8" height="26" rx="4" fill="#2da44e"/>
+<text x="554.7882442788297" y="195.68" class="v">146.7 ток/с · ×10.7</text>
+<text x="220" y="233.68" text-anchor="end" class="l">Llama-3.2-1B Q4_K_M · CPU</text>
+<rect x="230" y="216" width="25.3" height="26" rx="4" fill="#8c959f"/>
+<text x="263.2653200958576" y="233.68" class="v">11.7 ток/с</text>
+<text x="220" y="271.68" text-anchor="end" class="l">Llama-3.2-1B Q4_K_M · GPU</text>
+<rect x="230" y="254" width="255.5" height="26" rx="4" fill="#2da44e"/>
+<text x="493.4604587470045" y="271.68" class="v">118.3 ток/с · ×10.1</text>
+</svg>

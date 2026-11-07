@@ -1,0 +1,20 @@
+/target
+/models
+/tools
+*.png
+!docs/img/*.png
+!data/test_media/**/*.png
+*.tmp
+# large or generated data
+data/*.aidata
+data/photos/
+data/corpus/
+data/memory/
+data/*.log
+data/*_stats.json
+data/api_test_results.json
+data/textdet*/
+data/*.png
+embed_upscaled.png
+upscaled.png
+fox.png

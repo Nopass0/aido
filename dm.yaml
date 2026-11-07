@@ -1,0 +1,47 @@
+# =============================================================================
+#  AIDO — Dev Manager configuration
+#
+#  dm start          — run the OpenAI-compatible server (hot-reload on .rs change)
+#  dm test           — unit tests + doc tests (every documented example compiles/runs)
+#  dm exec aido -- … — run any CLI command in the project context
+#  dm lint / format  — code quality
+# =============================================================================
+version: 1
+project_name: aido
+
+services:
+  # The engine itself: OpenAI-compatible API server (LLM + images).
+  aido:
+    path: .
+    language: rust
+    run: cargo run --release -- serve -m models/Qwen3-0.6B-Q8_0.gguf --sd models/sd-turbo --taesd models/taesd --port 8080
+    watch: true
+    restart_on_change: true
+    order: 10
+    delay_ms: 0
+    tests:
+      cmd: cargo test --release --lib && cargo test --release --doc
+      on_change: false
+    logs:
+      enabled: true
+      level: info
+
+  # Benchmarks (on demand: `dm restart bench`).
+  bench:
+    path: .
+    language: rust
+    run: cargo run --release -- bench -m models/Qwen3-0.6B-Q8_0.gguf --spec lookup
+    watch: false
+    restart_on_change: false
+    order: 90
+    tests:
+      cmd: cargo run --release -- bench -m models/Qwen3-0.6B-Q8_0.gguf --tg 32 --pp 64
+
+deploy: []
+
+linter:
+  dr: true
+  kiss: true
+  unused_code: true
+  duplicates: true
+  auto_fix: false

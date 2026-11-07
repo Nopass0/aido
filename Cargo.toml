@@ -1,0 +1,72 @@
+[package]
+name = "aido"
+version = "0.1.0"
+edition = "2021"
+description = "AIDO — adaptive inference engine for local AI models (LLMs, decision models, image generation, upscaling) with an OpenAI-compatible server and an embeddable Rust API"
+license = "MIT"
+repository = "https://github.com/Nopass0/aido"
+readme = "README.md"
+keywords = ["llm", "inference", "gguf", "diffusion", "ai"]
+categories = ["science", "command-line-utilities"]
+
+[lib]
+name = "aido"
+path = "src/lib.rs"
+
+[[bin]]
+name = "aido"
+path = "src/main.rs"
+required-features = ["cli"]
+
+[features]
+# `server`: OpenAI-compatible HTTP API (axum/tokio). `cli`: the `aido` binary.
+# Embedding only the engine: `aido = { git = "...", default-features = false }`.
+default = ["server", "cli"]
+server = ["dep:axum", "dep:tokio", "dep:tokio-stream", "dep:futures"]
+cli = ["server", "dep:clap"]
+
+[dependencies]
+anyhow = "1"
+memmap2 = "0.9"
+half = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+fancy-regex = "0.14"
+minijinja = { version = "2", features = ["loader", "json"] }
+minijinja-contrib = { version = "2", features = ["pycompat"] }
+clap = { optional = true, version = "4", features = ["derive"] }
+axum = { version = "0.8", optional = true }
+tokio = { optional = true, version = "1", features = ["full"] }
+tokio-stream = { version = "0.1", optional = true }
+futures = { version = "0.3", optional = true }
+wgpu = "24"
+pollster = "0.4"
+bytemuck = { version = "1", features = ["derive"] }
+png = "0.17"
+base64 = "0.22"
+core_affinity = "0.8"
+image = "0.25"
+ab_glyph = "0.2"
+ureq = "2"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+debug = 1
+panic = "unwind"
+
+[profile.test]
+opt-level = 3
+
+[profile.dev.package."*"]
+opt-level = 3
+
+# Fast-to-build optimised profile for development iterations
+# (`cargo build --profile quick`); `release` adds fat LTO (~5-10 % faster).
+[profile.quick]
+inherits = "release"
+lto = false
+codegen-units = 16
+incremental = true
+debug = 0

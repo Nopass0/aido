@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="316" viewBox="0 0 760 316">
+<style>
+ text{font-family:Segoe UI,Helvetica,Arial,sans-serif;fill:#24292f}
+ .t{font-size:17px;font-weight:600}.s{font-size:12px;fill:#57606a}.l{font-size:13px}.v{font-size:12px;font-weight:600}
+ @media (prefers-color-scheme:dark){text{fill:#e6edf3}.s{fill:#8b949e}}
+</style>
+<text x="16" y="28" class="t">Позиций KV, читаемых на каждый токен генерации</text><text x="16" y="48" class="s">полное внимание растёт с контекстом; блочно-разреженное — ограничено бюджетом (8192)</text>
+<text x="220" y="81.68" text-anchor="end" class="l">8K, полное</text>
+<rect x="230" y="64" width="11.1" height="26" rx="4" fill="#8c959f"/>
+<text x="249.1413043478261" y="81.68" class="v">8192 </text>
+<text x="220" y="119.68" text-anchor="end" class="l">32K, полное</text>
+<rect x="230" y="102" width="44.6" height="26" rx="4" fill="#d4a72c"/>
+<text x="282.5652173913044" y="119.68" class="v">32768 </text>
+<text x="220" y="157.68" text-anchor="end" class="l">128K, полное</text>
+<rect x="230" y="140" width="178.3" height="26" rx="4" fill="#cf222e"/>
+<text x="416.2608695652174" y="157.68" class="v">131072 </text>
+<text x="220" y="195.68" text-anchor="end" class="l">256K, полное</text>
+<rect x="230" y="178" width="356.5" height="26" rx="4" fill="#cf222e"/>
+<text x="594.5217391304348" y="195.68" class="v">262144 </text>
+<text x="220" y="233.68" text-anchor="end" class="l">128K, AIDO sparse</text>
+<rect x="230" y="216" width="11.1" height="26" rx="4" fill="#2da44e"/>
+<text x="249.1413043478261" y="233.68" class="v">8192  · ×16 меньше</text>
+<text x="220" y="271.68" text-anchor="end" class="l">256K, AIDO sparse</text>
+<rect x="230" y="254" width="11.1" height="26" rx="4" fill="#2da44e"/>
+<text x="249.1413043478261" y="271.68" class="v">8192  · ×32 меньше</text>
+</svg>

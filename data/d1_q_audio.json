@@ -1,0 +1,6 @@
+{
+ "beeps": {"type": "number", "instructions": "How many beeps are there?", "range": [0, 10], "step": 1},
+ "speech": {"type": "noul", "instructions": "Does someone speak in the recording?"},
+ "intent": {"type": "choice", "instructions": "What does the caller want?",
+   "criteria": {"cancel": "Cancel a subscription or get a refund", "delivery": "Where is my parcel or order", "small_talk": "Talk about weather or other casual topics", "none": "No request, no speech"}}
+}
